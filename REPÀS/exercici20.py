@@ -7,7 +7,7 @@ while True:
         break
 
     if nombre in diccionario_contactos:
-        print("¡Error! Este nombre ya está en el diccionario. No se añadirá de nuevo.")
+        print("Este nombre ya está en el diccionario. No se añadirá de nuevo.")
     else:
         edad = input("Introduce la edad: ")
         diccionario_contactos[nombre] = int(edad)
