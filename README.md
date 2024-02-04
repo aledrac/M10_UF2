@@ -1,1 +1,6 @@
-# M10_UF2
+# M10_UF2![EliminarDatos](https://github.com/aledrac/M10_UF2/assets/145788478/82e28e9b-ffe4-4f86-9910-b3c67881f548)
+![Creacion_tabla](https://github.com/aledrac/M10_UF2/assets/145788478/e607a252-785c-42e2-88f4-c09f33c49f21)
+![Actualizar datos](https://github.com/aledrac/M10_UF2/assets/145788478/edcb17d4-9f9f-4433-98ee-2eb38f96c6c5)
+![Read](https://github.com/aledrac/M10_UF2/assets/145788478/bb9f577b-42eb-4be4-8c58-e50533e4af24)
+![Insertar datos](https://github.com/aledrac/M10_UF2/assets/145788478/6de51a91-2457-4614-9b99-6162f2fc6a31)
+![EliminarTabla](https://github.com/aledrac/M10_UF2/assets/145788478/00180084-97ba-46ba-b608-3f1548de9d1e)
