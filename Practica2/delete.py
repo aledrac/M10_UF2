@@ -1,6 +1,26 @@
 # delete.py
-from connection import connection
+import psycopg2
+from conn import connection, conn
 
-def delete_data(cursor, record_id):
-    sql_delete = "DELETE FROM your_table_name WHERE id = %s"
-    cursor.execute(sql_delete, (record_id,))
+def delete_table_fun():
+    try:
+        # Eliminar la tabla direcciones
+        sql_delete_table = """DROP TABLE IF EXISTS public.direcciones"""
+        connection.execute(sql_delete_table)
+        conn.commit()
+        print("Tabla 'direcciones' eliminada correctamente.")
+    except(Exception, psycopg2.Error) as error:
+        print("Error: ", error)
+
+def delete_register():
+    try:
+         # Solicitar al usuario los valores
+        id_val = input("Ingrese el ID: ")
+
+        sql_delete = f"""DELETE FROM public.direcciones WHERE id = {id_val}"""
+
+        connection.execute(sql_delete)
+        conn.commit()
+
+    except(Exception, psycopg2.Error) as error:
+        print("Error: ", error)

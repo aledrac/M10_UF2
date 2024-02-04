@@ -1,11 +1,24 @@
 # read.py
-def select_data(cursor):
-    sql_select = "SELECT * FROM your_table_name"
-    cursor.execute(sql_select)
-    result = cursor.fetchall()
+import psycopg2
+from conn import connection,conn
 
-    if not result:
-        print("No hay datos en la tabla.")
-    else:
-        for row in result:
-            print(row)
+def mostrar_datos():
+    try:
+
+        # Solicitar id al usuario 
+        id_val = input("Ingrese el ID a buscar: ")
+
+        sql_select = f'''SELECT * FROM public.direcciones where id = {id_val}'''
+
+        connection.execute(sql_select)
+        # conn.commit()
+        result = connection.fetchall()
+
+        for i in result:
+            print("id: " , i[0],)
+            print("nombre:", i[1],)
+            print("direccion: ", i[2], "\n")
+
+    except(Exception, psycopg2.Error) as error:
+        print("Error: ", error)
+
